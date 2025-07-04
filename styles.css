@@ -1,0 +1,65 @@
+body{
+   font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #555;
+    position: relative;
+    background-color: #f2f4f8;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-right: 30px;
+}   
+
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: rgba(231, 228, 228, 0.1);
+    padding: 20px;
+    position: fixed;
+    float: left;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+}
+
+.sidebar li{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.conteudo {
+    margin-top: 20px;     /* distância do header */
+    margin-left: 260px;   /* distância da sidebar */
+    margin-right: 30px;
+    padding: 110px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card {
+    
+    margin-top: 20px;     /* distância do header */
+    margin-left: 260px;   /* distância da sidebar */
+    margin-right: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 100px;
+    margin-bottom: 20px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f4f8;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+    margin-right: 30px;
+}
