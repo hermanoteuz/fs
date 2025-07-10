@@ -1,0 +1,194 @@
+/* Reset e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #555;
+    position: relative;
+    background-color: #f2f4f8;
+}
+
+/* Cabeçalho fixo */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.topbar-icons i {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Sidebar (nova estrutura) */
+.template-nav {
+    width: 220px;
+    background-color: transparent;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.template-nav-container {
+    padding: 0 10px;
+}
+
+.nav-root {
+    list-style: none;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.title > .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    gap: 10px; /* espaço entre ícone e texto */
+}
+
+
+.title > .link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.title > .link i {
+    margin-right: 8px;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.submenu li {
+    margin: 4px 0;
+}
+
+.submenu li strong {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin: 8px 0 4px;
+}
+
+.link-sub {
+    display: block;
+    font-size: 14px;
+    padding: 6px 10px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.link-sub:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.submenu-icon {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Conteúdo principal */
+.content {
+    position: relative;
+    margin-top: 80px;               /* Distância do topo (header) */
+    margin-left: 220px;             /* Largura da sidebar */
+    margin-right: 30px;
+    margin-bottom: 40px;
+
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+
+    width: calc(100% - 240px);      /* Ocupa o restante da tela, exceto sidebar */
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Tipos de texto */
+.content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f4f8;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cartões visuais de destaque */
+.card {
+    margin-top: 20px;
+    margin-left: 260px;
+    margin-right: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.submenu.open {
+    display: block;
+}

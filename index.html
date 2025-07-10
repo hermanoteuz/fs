@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Web - S.Oliveira</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícones do Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- citar todos css agrupados -->
+    <link rel="stylesheet" href="style/index.css">
+
+</head>
+<body>
+    <!-- Topo -->
+    <header class="topbar">
+        <h1 class="logo">Sistema S.Oliveira</h1>
+        <div class="topbar-icons">
+            <i data-lucide="settings"></i>
+            <i data-lucide="user"></i>
+        </div>
+    </header>
+
+    <!-- Layout principal -->
+    <div class="layout">
+        
+        <!-- Menu lateral -->
+        <nav class="template-nav">
+  <div class="template-nav-container">
+    <ul class="nav-root">
+
+      <li class="title">
+        <a class="link" href="#" id="home">
+          <i data-lucide="home"></i> Home
+        </a>
+      </li>
+
+      <li class="title">
+        <a class="link" href="javascript:void(0)">
+          <i data-lucide="users"></i> Cadastro
+          <span class="submenu-icon">▾</span>
+        </a>
+        <ul class="submenu">
+          <li><strong>Entidades</strong></li>
+          <li><a href="#" class="link-sub">Fornecedor</a></li>
+          <li><a href="#" class="link-sub">Cliente</a></li>
+          <li><a href="#" class="link-sub">Transportadora</a></li>
+          <li><strong>Produto</strong></li>
+          <li><a href="#" class="link-sub">Itens</a></li>
+          <li><a href="#" class="link-sub">Categoria</a></li>
+          <li><a href="#" class="link-sub">Unidade</a></li>
+          <li><a href="#" class="link-sub">Marca</a></li>
+        </ul>
+      </li>
+
+      <li class="title">
+        <a class="link" href="javascript:void(0)">
+          <i data-lucide="shopping-cart"></i> Vendas
+          <span class="submenu-icon">▾</span>
+        </a>
+        <ul class="submenu">
+          <li><a href="#" class="link-sub">Orçamento / Pedido</a></li>
+          <li><a href="#" class="link-sub">Listagem de Operações</a></li>
+        </ul>
+      </li>
+
+      <li class="title">
+        <a class="link" href="#" id="triagem">
+          <i data-lucide="list"></i> Triagem
+        </a>
+      </li>
+
+      <li class="title">
+        <a class="link" href="#" id="relatorio">
+          <i data-lucide="bar-chart-3"></i> Relatório
+        </a>
+      </li>
+
+      <li class="title">
+        <a class="link" href="#" id="configuracao">
+          <i data-lucide="settings"></i> Configuração
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+        <!-- Área de conteúdo principal -->
+        <main class="content">
+            <h2>Bem-vindo ao Sistema!</h2>
+            <p>Selecione uma opção no menu ao lado.</p>
+        </main>
+    </div>
+
+    <!-- Inicializa os ícones -->
+    <script>
+    // Inicializa os ícones Lucide
+    lucide.createIcons();
+</script>
+
+<script>
+    // Torna os submenus recolhíveis
+    document.querySelectorAll('.title > .link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const submenu = this.parentElement.querySelector('.submenu');
+
+            if (submenu) {
+                submenu.classList.toggle('open');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+    
